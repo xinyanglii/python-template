@@ -1,0 +1,4 @@
+# @package _global_
+
+# to execute this experiment run:
+# python main.py experiment=example

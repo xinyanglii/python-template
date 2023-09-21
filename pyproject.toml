@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "src"
+authors = [
+    {name = "Xinyang Li", email = "xinyang.li@tum.de"},
+]
+description = "My package description"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["python", "template"]
+license = {file = "LICENSE"}
+classifiers = [
+    'Development Status :: 4 - Beta',
+    "Environment :: Console",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    'Programming Language :: Python :: 3.8',
+]
+dependencies = [
+  "autoroot",
+  "autorootcwd",
+  "hydra-core",
+  "pytest",
+  "numpy",
+  "scipy",
+  "hydra-colorlog",
+  "rootutils"
+]
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts =  [
+  "--color=yes",
+  "--durations=0",
+]
+testpaths = "tests/"

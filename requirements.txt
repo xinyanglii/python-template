@@ -1,0 +1,9 @@
+autoroot
+autorootcwd
+hydra-core
+pytest
+numpy
+scipy
+hydra-colorlog
+rootutils
+torch -i https://download.pytorch.org/whl/cu118
