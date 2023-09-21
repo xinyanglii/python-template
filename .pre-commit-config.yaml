@@ -18,19 +18,19 @@ repos:
 
   # add trailing comma
   - repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.4.0
+    rev: v3.1.0
     hooks:
       - id: add-trailing-comma
         args: [--py36-plus]
 
   # python code formatting
   - repo: https://github.com/psf/black
-    rev: 23.1.0
+    rev: 23.9.1
     hooks:
       - id: black
-        args: 
+        args:
           - --line-length=120
-        # these folders wont be formatted by black
+          # these folders wont be formatted by black
           - --exclude="""\.git |
             \.__pycache__|
             \.hg|
@@ -51,33 +51,28 @@ repos:
 
   # python upgrading syntax to newer version
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.11.1
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
 
   # python docstring formatting
   - repo: https://github.com/myint/docformatter
-    rev: v1.7.4
+    rev: v1.7.5
     hooks:
       - id: docformatter
-        args:
-          [
-            --in-place,
-            --style=sphinx,
-            --black,
-          ]
+        args: [--in-place, --style=sphinx, --black]
 
   # python check (PEP8), programming errors and code complexity
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
+    rev: 6.1.0
     hooks:
       - id: flake8
         args:
           [
             "--max-line-length=120",
             "--extend-ignore",
-            "E203,E501,RST2,RST301",
+            "E203,F401,E501,RST2,RST301",
             "--exclude",
             "logs/*,data/*",
           ]
@@ -85,20 +80,20 @@ repos:
 
   # yaml formatting
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.0-alpha.6
+    rev: v3.0.3
     hooks:
       - id: prettier
         types: [yaml]
 
   # shell scripts linter
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.9.0.2
+    rev: v0.9.0.5
     hooks:
       - id: shellcheck
 
   # md formatting
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.16
+    rev: 0.7.17
     hooks:
       - id: mdformat
         args: ["--number"]
@@ -111,7 +106,7 @@ repos:
 
   # word spelling linter
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.4
+    rev: v2.2.5
     hooks:
       - id: codespell
         args:
