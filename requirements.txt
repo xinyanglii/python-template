@@ -7,4 +7,5 @@ numpy
 scipy
 hydra-colorlog
 rootutils
+notebook
 torch -i https://download.pytorch.org/whl/cu118
